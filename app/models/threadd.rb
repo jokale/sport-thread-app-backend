@@ -1,0 +1,2 @@
+class Threadd < ApplicationRecord
+end

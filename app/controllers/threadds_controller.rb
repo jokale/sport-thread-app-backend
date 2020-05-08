@@ -1,0 +1,2 @@
+class ThreaddsController < ApplicationController
+end
