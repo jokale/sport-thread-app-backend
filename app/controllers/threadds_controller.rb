@@ -2,7 +2,7 @@ class ThreaddsController < ApplicationController
 
     def index
         @threadds = Threadd.all 
-        render json: @threadds, include: [:comments]
+        render json: @threadds, include: [:comments], status:200
     end 
 
     def create
