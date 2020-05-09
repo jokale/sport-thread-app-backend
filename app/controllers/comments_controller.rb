@@ -4,9 +4,10 @@ class CommentsController < ApplicationController
 
     def index
         @comments = Comment.all 
-        render json: @comments 
+        render json: @comments, 
+        # except: [:created_at, :updated_at]
     end 
-
+  
     def create
         @comment = Comments.new(comment_params) 
         if @comment.save 
