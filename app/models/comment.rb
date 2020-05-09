@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
     belongs_to :threadd
     
-    validates :username, :description, presence: true
+    validates :username, :comment_description, presence: true
 
 end

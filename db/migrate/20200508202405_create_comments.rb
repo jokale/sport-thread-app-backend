@@ -4,7 +4,7 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.string :username
       t.datetime :date
       t.text :comment_description
-      t.integer :thread_id
+      t.integer :threadd_id
 
       t.timestamps
     end

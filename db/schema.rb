@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_05_08_202405) do
     t.string "username"
     t.datetime "date"
     t.text "comment_description"
-    t.integer "thread_id"
+    t.integer "threadd_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
