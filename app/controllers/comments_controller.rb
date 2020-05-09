@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-    before_action: :set_threadd
+    # before_action: set_threadd
 
     def index
         @comments = @threadd.comment.all 
@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     end 
 
     def create
-        @comment = Comment.new(comment_params) 
+        @comment = Comments.new(comment_params) 
         if @comment.save 
         render json: @comment 
         else  
@@ -34,9 +34,9 @@ class CommentsController < ApplicationController
         render json: {commentId: @comment.id}
     end 
 
-    def set_threadd
-        @threadd = Threadd.find(params[:threadd_id])
-    end 
+    # def set_threadd
+    #     @threadd = Threadd.find(params[:threadd_id])
+    # end 
 
     private
 
