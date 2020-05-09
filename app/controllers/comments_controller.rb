@@ -3,8 +3,8 @@ class CommentsController < ApplicationController
     # before_action: set_threadd
 
     def index
-        @comments = @threadd.comment.all 
-        render json: @comments
+        @comments = Comment.all 
+        render json: @comments 
     end 
 
     def create

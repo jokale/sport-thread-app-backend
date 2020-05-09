@@ -16,7 +16,7 @@ class ThreaddsController < ApplicationController
 
     def show
         @threadd = Threadd.find(params[:id])
-        render json: @threadd, include: [:comment]
+        render json: @threadd, include: [:comments]
     end 
 
    
