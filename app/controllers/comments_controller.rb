@@ -1,17 +1,17 @@
 class CommentsController < ApplicationController
 
-    # before_action: set_threadd
+    before_action: set_threadd
 
     def index
         @comments = Comment.all 
-        render json: @comments, 
+        render json: @comments 
         # except: [:created_at, :updated_at]
     end 
   
     def create
-        @comment = Comments.new(comment_params) 
+        @comment = @threadd.comments.new(comment_params) 
         if @comment.save 
-        render json: @comment 
+        render json: @threadd
         else  
             render json: {error: 'Error creating a new thread please try again'}
         end 
@@ -35,9 +35,9 @@ class CommentsController < ApplicationController
         render json: {commentId: @comment.id}
     end 
 
-    # def set_threadd
-    #     @threadd = Threadd.find(params[:threadd_id])
-    # end 
+    def set_threadd
+         @threadd = Threadd.find(params[:threadd_id])
+     end 
 
     private
 
