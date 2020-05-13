@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-    before_action: set_threadd
+    before_action :set_threadd
 
     def index
         @comments = Comment.all 
