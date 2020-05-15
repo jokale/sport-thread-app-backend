@@ -10,10 +10,11 @@ class CommentsController < ApplicationController
   
     def create
         @comment = @threadd.comments.new(comment_params) 
+        @comment.date = DateTime.now
         if @comment.save 
         render json: @threadd
         else  
-            render json: {error: 'Error creating a new thread please try again'}
+            render json: {error: 'Error creating a new comment please try again'}
         end 
     end 
 
