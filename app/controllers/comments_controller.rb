@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-    before_action :set_threadd
+    before_action :set_threadd, only: [:create]
 
     def index
         @comments = Comment.all 
@@ -33,10 +33,12 @@ class CommentsController < ApplicationController
         # render json: @comment
     end 
 
-    def destroy
+    def destroy       
+        # binding.pry       
         @comment = Comment.find(params[:id])
-        @comment.delete 
-        render json: {commentId: @comment.id}
+         @threadd = Threadd.find(@comment.threadd_id)
+        @comment.destroy
+        render json: @threadd
     end 
 
     def set_threadd
