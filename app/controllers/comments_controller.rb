@@ -8,9 +8,12 @@ class CommentsController < ApplicationController
         # except: [:created_at, :updated_at]
     end 
   
-    def create
+    def create        
+        
+
         @comment = @threadd.comments.new(comment_params) 
         @comment.date = DateTime.now
+        # binding.pry 
         if @comment.save 
         render json: @threadd
         else  
