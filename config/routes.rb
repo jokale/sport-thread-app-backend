@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-   resources :comments
-  resources :threadds
+  resources :comments
+  # resources :threadds
 
   resources :threadds do 
     resources :comments

@@ -17,7 +17,7 @@ class ThreaddsController < ApplicationController
 
     def show
         @threadd = Threadd.find(params[:id])
-        render json: @threadd, include: [:comments]
+        render json: @threadd
     end 
 
    
@@ -37,7 +37,7 @@ class ThreaddsController < ApplicationController
     private
 
     def threadd_params
-        params.require(:threadd).permit(:username, :date, :thread_title, :thread_body, comment_attributes:[:threadd_id, :username, :date, :comment_description])
+        params.require(:threadd).permit(:username, :date, :thread_title, :thread_body)
     end 
 
 

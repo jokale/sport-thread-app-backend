@@ -1,19 +1,19 @@
 class CommentsController < ApplicationController
 
-    before_action :set_threadd, only: [:create]
+    before_action :set_threadd
+    # binding.pry 
 
     def index
         @comments = Comment.all 
         render json: @comments 
-        # except: [:created_at, :updated_at]
     end 
   
-    def create        
-        
-
+    def create           
+         
+     
         @comment = @threadd.comments.new(comment_params) 
         @comment.date = DateTime.now
-        # binding.pry 
+        #  binding.pry 
         if @comment.save 
         render json: @threadd
         else  
@@ -41,11 +41,15 @@ class CommentsController < ApplicationController
         render json: @threadd
     end 
 
-    def set_threadd
+  
+
+
+    private
+
+      def set_threadd
          @threadd = Threadd.find(params[:threadd_id])
      end 
 
-    private
 
     def comment_params
         params.require(:comment).permit(:threadd_id, :username, :date, :comment_description)
