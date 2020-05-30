@@ -1,24 +1,29 @@
-# README
+## Welcome to The Sport Thread  
+# The Sport Thread is a  place where you can strike up different conversations about <br></br> different sport related topics, news and more through threads!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# To install locally 
 
-Things you may want to cover:
+• Fork and clone [The Sport Thread Backend](https://github.com/jokale/sport-thread-app-backend)
 
-* Ruby version
+• Navigate to the top of the  directory 
+    - cd sport-thread-app-backend
 
-* System dependencies
 
-* Configuration
+• Install required gem dependencies: 
+    - bundle install 
 
-* Database creation
+• Create and seed the database with the data:
+    - rails db: create
+     - rails db:seed 
 
-* Database initialization
+• Begin the server:
+    -rails s
 
-* How to run the test suite
+• Once the server is running we can open by doing the same, forking, cloning the frontend[Sport Thread Frontend](https://github.com/jokale/sport-thread-frontend)
 
-* Services (job queues, cache servers, search engines, etc.)
+•Once in the directory 
+    - type npm install to install relevant packages 
+    - then type in npm start which kickstart the server for you once you follow the instructions on the page 
 
-* Deployment instructions
 
-* ...
+•Enjoy the app!
