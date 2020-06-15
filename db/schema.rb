@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2020_06_15_173841) do
     t.string "username"
     t.string "email"
     t.string "password_digest"
+    t.integer "threadd_id"
+    t.integer "comment_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
