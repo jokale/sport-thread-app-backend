@@ -1,5 +1,5 @@
 class CommentSerializer < ActiveModel::Serializer
-  attributes :id,:username, :date, :comment_description, :threadd_id
+  attributes :id,:username, :date, :comment_description, :threadd_id, :upvote, :downvote
   belongs_to :threadd 
 
   def date

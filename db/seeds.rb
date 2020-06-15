@@ -8,7 +8,7 @@
 
 thread_1 = Threadd.create([username: 'Joanna', date: Date.today, thread_title: 'The best track and field athlete of all time!', thread_body: 'I personally feel like the greatest track and field is Usain Bolt! What a legend!'])
 
-comment_1 = Comment.create([threadd_id: 1, username: 'Tom', date: DateTime.now, comment_description: 'I disagree I think Carl Lewis is the best!'])
+comment_1 = Comment.create([threadd_id: 1, username: 'Tom', date: DateTime.now, comment_description: 'I disagree I think Carl Lewis is the best!' , upvote: 1, downvote: 4])
 
-comment_2 = Comment.create([threadd_id: 1, username: 'Lucy', date: DateTime.now, comment_description: 'Yeah Bolt is a legend he is the best !'])
+comment_2 = Comment.create([threadd_id: 1, username: 'Lucy', date: DateTime.now, comment_description: 'Yeah Bolt is a legend he is the best !', upvote: 6, downvote: 1])
 

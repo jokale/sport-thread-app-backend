@@ -5,6 +5,8 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.datetime :date
       t.text :comment_description
       t.integer :threadd_id
+      t.integer :upvote
+      t.integer :downvote
 
       t.timestamps
     end

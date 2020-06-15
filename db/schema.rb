@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_08_202405) do
+ActiveRecord::Schema.define(version: 2020_06_15_173841) do
 
   create_table "comments", force: :cascade do |t|
     t.string "username"
     t.datetime "date"
     t.text "comment_description"
     t.integer "threadd_id"
+    t.integer "upvote"
+    t.integer "downvote"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -26,6 +28,14 @@ ActiveRecord::Schema.define(version: 2020_05_08_202405) do
     t.date "date"
     t.string "thread_title"
     t.text "thread_body"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

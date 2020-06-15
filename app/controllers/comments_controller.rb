@@ -52,6 +52,6 @@ class CommentsController < ApplicationController
 
 
     def comment_params
-        params.require(:comment).permit(:threadd_id, :username, :date, :comment_description)
+        params.require(:comment).permit(:threadd_id, :username, :date, :comment_description, :upvote, :downvote)
     end 
 end

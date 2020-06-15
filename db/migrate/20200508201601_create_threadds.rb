@@ -5,7 +5,6 @@ class CreateThreadds < ActiveRecord::Migration[6.0]
       t.date :date
       t.string :thread_title
       t.text :thread_body
-
       t.timestamps
     end
   end
