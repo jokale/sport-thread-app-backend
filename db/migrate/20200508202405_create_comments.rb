@@ -7,6 +7,8 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.integer :threadd_id
       t.integer :upvote
       t.integer :downvote
+      t.integer :user_id 
+
 
       t.timestamps
     end

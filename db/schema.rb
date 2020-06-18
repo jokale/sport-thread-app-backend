@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_173841) do
     t.integer "threadd_id"
     t.integer "upvote"
     t.integer "downvote"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_173841) do
     t.date "date"
     t.string "thread_title"
     t.text "thread_body"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
