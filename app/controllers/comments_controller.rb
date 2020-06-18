@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
         @comment.date = DateTime.now
         #  binding.pry 
         if @comment.save 
-        render json: @threadd
+        render json: @threadds
         else  
             render json: {error: 'Error creating a new comment please try again'}
         end 
@@ -47,7 +47,7 @@ class CommentsController < ApplicationController
     private
 
       def set_threadd
-         @threadd = Threadd.find(params[:threadd_id])
+         @threadds = Threadd.find_by_id(params[:threadd_id])
      end 
 
 

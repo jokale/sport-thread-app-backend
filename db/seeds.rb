@@ -6,13 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user_1 = User.create([username: 'Joanna', email: 'joanna@gmail.com', password: 123, threadd_id: 1])
+ User.create(username: 'Joanna', email: 'joanna@gmail.com', password_digest: 'password')
 
-user_2 = User.create([username: 'Kelly', email: 'kelstar@gmail.com', password: 123, threadd_id: 2])
+# user_2 = User.create([username: 'Kelly', email: 'kelstar@gmail.com', password_digest: 'password'])
 
-user_2 = User.create([username: 'Tom', email: 'tommytommy@gmail.com', password: 123, threadd_id: , comment_id:1])
-
-user_2 = User.create([username: 'Lucy', email: 'lucy@hotmail.com', password: 123, threadd_id: , comment_id:2])
 
 
 thread_1 = Threadd.create([username: 'Joanna', date: Date.today, thread_title: 'The best track and field athlete of all time!', thread_body: 'I personally feel like the greatest track and field is Usain Bolt! What a legend!', user_id: 1 ])

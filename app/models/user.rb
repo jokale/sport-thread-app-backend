@@ -4,7 +4,7 @@ class User < ApplicationRecord
     belongs_to :threadd 
     belongs_to :comment 
     
-    validates :username, , presence: true
+    validates :username, presence: true
     validates :email, uniqueness: true
 
     has_secure_password
