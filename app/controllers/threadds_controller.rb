@@ -37,7 +37,7 @@ class ThreaddsController < ApplicationController
     private
 
     def threadd_params
-        params.require(:threadd).permit(:username, :date, :thread_title, :thread_body)
+        params.require(:threadd).permit(:username, :date, :thread_title, :thread_body, :user_id)
     end 
 
 
